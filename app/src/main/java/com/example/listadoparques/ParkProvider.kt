@@ -33,8 +33,7 @@ class ParkProvider {
 
             Park(
                 nombre = "Parc de Bercy",
-                descripcion = "El Parque de Bercy es un parque situado  " +
-                              "en el XII Distrito de París",
+                descripcion = "El Parque de Bercy es un parque situado en París",
                 photo = "https://parisjetaime.com/data/layout_image/fr-FR/Parc-de-Bercy-jardin-630x405-C-OTCP-Jacques-Lebar-I-162-24.jpg"
             )
         )

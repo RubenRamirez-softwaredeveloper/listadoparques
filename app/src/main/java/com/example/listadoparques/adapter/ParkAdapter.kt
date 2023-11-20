@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.listadoparques.Park
 import com.example.listadoparques.R
 
-    class ParkAdapter(val parkList: List<Park>) : RecyclerView.Adapter<ParkViewHolder>() {
+    class ParkAdapter(private var parkList: List<Park>) : RecyclerView.Adapter<ParkViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParkViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
             return ParkViewHolder(layoutInflater.inflate(R.layout.item_park, parent, false))
@@ -14,6 +14,11 @@ import com.example.listadoparques.R
 
         override fun getItemCount(): Int {
             return parkList.size
+        }
+
+        fun actualizarParques(listaparque: List<Park>) {
+            this.parkList = listaparque
+            notifyDataSetChanged()
         }
 
         override fun onBindViewHolder(holder: ParkViewHolder, position: Int) {
